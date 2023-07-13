@@ -19,6 +19,9 @@ void autoDelayRelay1()
 void autoDelayRelay1()
 ```
 
+`setPortName` returns a bool as it will only return true if the portName requested
+was in the list of port names it can find.
+
 ## Available Qt Slots
 ```
 void openPort()
