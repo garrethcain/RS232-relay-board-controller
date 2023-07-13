@@ -38,7 +38,7 @@ Features:
 
 # Control commands
 
-## Reading status(reading the satus of the relay (on/off))
+## Reading status(reading the status of the relay (on/off))
 
 `0x55  0x56  0x00  0x00  0x00  0x00  0x00  0xAB`
 
@@ -48,13 +48,13 @@ Channel 1 : `0x55  0x56  0x00  0x00  0x00  0x01  0x01  0xAD`
 
 Channel 2 : `0x55  0x56  0x00  0x00  0x00  0x02  0x01  0xAE`
 
-## Relay close (issue this command,Relay close,COM disconnect NO,and COM connect to NC)
+## Relay close (issue this command, Relay close, COM disconnect NO, and COM connect to NC)
 
 Channel 1 : `0x55  0x56  0x00  0x00  0x00  0x01  0x02  0xAE`
 
 Channel 2 : `0x55  0x56  0x00  0x00  0x00  0x02  0x02  0xAF`
 
-## Relay toggle(Relay status reversal, if COM connect to NO,this commands will Disconnect COM to NO and Reverse COM connect to NC,and vice versa)
+## Relay toggle(Relay status reversal, if COM connect to NO, this commands will Disconnect COM to NO and Reverse COM connect to NC, and vice versa)
 
 Channel 1 : `0x55  0x56  0x00  0x00  0x00  0x01  0x03  0xAF`
 
