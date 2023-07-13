@@ -3,6 +3,11 @@
 The code for this is slowing being released in several different languages
 and flavours...
 
+- [ ] C
+- [ ] Cpp
+- [x] Qt Cpp
+- [ ] Python
+
 ## Device:
 https://www.flyrobo.in/dc-12v-2-channel-serial-port-rs232-relay-module-board
 https://www.amazon.com.au/WQBYCBC-Universal-2-Channel-Professional-Portable/dp/B0BYKFJJGJ/
