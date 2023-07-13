@@ -50,7 +50,7 @@ signals:
     void onConnect();
     void onDisconnect();
     void onMessage(QString msg);
-    void dataReady(QString msg);
+    void dataReady(QByteArray data);
 };
 
 #endif // REMOTESERIALDRIVER_H
