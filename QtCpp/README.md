@@ -30,6 +30,7 @@ m_serialDriver->autoDelayRelay1();
 ### Remember to clear your mallocs
 
 m_serialDriver->closePort();
+
 delete m_serialDriver;
 
 
