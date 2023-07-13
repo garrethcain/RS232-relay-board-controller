@@ -9,6 +9,27 @@ Qt's serial port implementations.
 
 Clear all project files, run QMake and then recompile your application.
 
+## Get Started
+
+There are two way to include this source in your project.
+
+Either add the following to your projects .PRO file;
+
+```
+include(../RS232-relay-board-controller/QtCpp/RemoteSerialDriver.pri)
+```
+
+Or simply just include the header and unit files;
+
+```
+SOURCES += ../RS232-relay-board-controller/QtCpp/remoteserialdriver.cpp \
+            ...
+
+HEADERS  += ../RS232-relay-board-controller/QtCpp/remoteserialdriver.h \
+            ...
+```
+
+
 ## Available methods
 ```
 bool setPortName(QString)
