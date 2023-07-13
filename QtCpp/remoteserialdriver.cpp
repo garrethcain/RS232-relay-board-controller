@@ -140,5 +140,5 @@ void RemoteSerialDriver::readData()
 {
     QByteArray data = m_port->readAll();
     qDebug() << "Data arrived:" << data;
-    emit dataReady(QString(data));
+    emit dataReady(data);
 }
