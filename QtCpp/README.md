@@ -9,6 +9,33 @@ Qt's serial port implementations.
 
 Clear all project files, run QMake and then recompile your application.
 
+## Available methods
+```
+bool setPortName(QString)
+void setSecondsDelay()
+void getAvailablePorts()
+
+void autoDelayRelay1()
+void autoDelayRelay1()
+```
+
+## Available Qt Slots
+```
+void openPort()
+void closePort()
+
+void onRelay1()
+void offRelay1()
+
+void onRelay2()
+void offRelay()
+```
+
+## Available Signals
+```
+void onMessage(QString)
+void dataRead(QByteArray)
+```
 
 Minimal implementation is as follows;
 ```
