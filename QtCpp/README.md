@@ -67,10 +67,24 @@ m_remoteSerial->offRelay1();
 m_serialDriver->autoDelayRelay1();
 ```
 
-### Remember to clear your mallocs
+### Remember to release your mallocs
 ```
 m_serialDriver->closePort();
 delete m_serialDriver;
 ```
 
-
+Example output when looping the Available Ports method.
+```
+Available Ports:
+    "cu.wlan-debug" "/dev/cu.wlan-debug"
+    "tty.wlan-debug" "/dev/tty.wlan-debug"
+    "cu.UEBOOM" "/dev/cu.UEBOOM"
+    "tty.UEBOOM" "/dev/tty.UEBOOM"
+    "cu.Bluetooth-Incoming-Port" "/dev/cu.Bluetooth-Incoming-Port"
+    "tty.Bluetooth-Incoming-Port" "/dev/tty.Bluetooth-Incoming-Port"
+    "cu.usbserial-0001" "/dev/cu.usbserial-0001"
+    "tty.usbserial-0001" "/dev/tty.usbserial-0001"
+    "cu.SLAB_USBtoUART" "/dev/cu.SLAB_USBtoUART"
+    "tty.SLAB_USBtoUART" "/dev/tty.SLAB_USBtoUART"
+Opened "/dev/cu.usbserial-0001"
+```
