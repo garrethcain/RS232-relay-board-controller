@@ -1,7 +1,7 @@
 #include "remoteserialdriver.h"
 
 RemoteSerialDriver::RemoteSerialDriver(QObject *parent) : QObject(parent){
-
+    m_port = nullptr;
     m_connected = false;
     m_milliseconds = 2000; // sane default setting.
     m_portList = QSerialPortInfo::availablePorts();
@@ -25,7 +25,8 @@ bool RemoteSerialDriver::setPortName(QString portName){
     if(portName.isEmpty()){
         return false;
     }
-    for(int i=0; i<=m_portList.count(); i++){
+    // for(int i=0; i<=m_portList.count(); i++){
+    for(int i=0; i< m_portList.count(); i++){
         if(m_portList[i].systemLocation() == portName){
             m_portName = portName;
             return true;
@@ -64,11 +65,13 @@ void RemoteSerialDriver::offRelay2()
 
 void RemoteSerialDriver::autoDelayRelay1()
 {
+    onRelay1();
     QTimer::singleShot(m_milliseconds, this, SLOT(offRelay1()));
 }
 
 void RemoteSerialDriver::autoDelayRelay2()
 {
+    onRelay2();
     QTimer::singleShot(m_milliseconds, this, SLOT(offRelay2()));
 }
 
